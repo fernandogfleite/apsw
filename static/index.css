@@ -47,3 +47,7 @@ body {
 .container{
     padding:20px;
 }
+
+.navbar a{
+    margin-left: 60px;
+}
