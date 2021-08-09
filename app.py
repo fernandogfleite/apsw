@@ -93,6 +93,7 @@ def logout():
 
 
 @app.route("/home")
+@login_required
 def home():
     dados_aumento = ["20", "30", "40"]
     dados_reducao = ["50", "60", "70"]
