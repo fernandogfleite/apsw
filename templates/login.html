@@ -1,22 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../static/login.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <title>Document</title>
-</head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AdminLTE 3 | Log in</title>
 
-<body>
-  <div class="login-page">
-    <div class="form">
-      <form class="login-form" method="POST" action="">
-        <fieldset class="form-group">
-          <legend class="border-bottom mb-4">Login</legend>
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../static/all.min.css">
+  <!-- icheck bootstrap -->
+  <link rel="stylesheet" href="../static/icheck-bootstrap.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../static/adminlte.min.css">
+</head>
+<body class="hold-transition login-page">
+<div class="login-box">
+  </div>
+  <!-- /.login-logo -->
+  <div class="card">
+    <div class="card-body login-card-body">
+      <p class="login-box-msg">Login</p>
+
+      <form action="" method="post">
+        <div class="input-group mb-3">
           <div class="form-group">
             {{ form.email.label(class="form-control-label") }}
             {% if form.email.errors %}
@@ -30,6 +37,8 @@
             {{ form.email(class="form-control form-control-lg") }}
             {% endif %}
           </div>
+        </div>
+        <div class="input-group mb-3">
           <div class="form-group">
             {{ form.password.label(class="form-control-label") }}
             {% if form.password.errors %}
@@ -43,26 +52,32 @@
             {{ form.password(class="form-control form-control-lg") }}
             {% endif %}
           </div>
-        </fieldset>
-        <div class="form-group">
-          <a href="{{url_for('register')}}">Não possui uma conta? Registre-se</a>
         </div>
-        <div class="form-group">
-          {{ form.submit(class="btn btn-outline-info") }}
+          <!-- /.col -->
+          <div class="col-4">
+            {{ form.submit(class="btn btn-block btn-primary") }}
+          </div>
+          <!-- /.col -->
         </div>
       </form>
-    </div>
-  </div>
-  </div>
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-    crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-    crossorigin="anonymous"></script>
-</body>
 
+      <div class="social-auth-links text-center mb-3">
+        <p>- OU -</p>
+        <a href="{{url_for('register')}}" class="btn btn-flex btn-primary">Registre-se
+        </a>
+      </div>
+      <!-- /.social-auth-links -->
+    </div>
+    <!-- /.login-card-body -->
+  </div>
+</div>
+<!-- /.login-box -->
+
+<!-- jQuery -->
+<script src="../static/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="../static/bootstrap.bundle.min.js"></script>
+<!-- AdminLTE App -->
+<script src="../static/adminlte.min.js"></script>
+</body>
 </html>
