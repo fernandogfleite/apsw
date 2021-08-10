@@ -100,3 +100,8 @@ def home():
     dados_media = ["20", "36", "42"]
     data = datetime.datetime.now().strftime("%m/%d/%Y")
     return render_template("index.html", aumento=dados_aumento, reducao=dados_reducao, media=dados_media, data=data)
+
+
+@app.route("/navbar")
+def navbar():
+    return render_template("navbar.html")
